@@ -1,0 +1,29 @@
+2021-09-04T16:00:50.891879900Z Downloading:   0%|          | 0.00/213k [00:00<?, ?B/s]Downloading:  19%|█▉        | 41.0k/213k [00:00<00:00, 263kB/s]Downloading:  32%|███▏      | 67.6k/213k [00:00<00:00, 197kB/s]Downloading:  42%|████▏     | 90.1k/213k [00:00<00:00, 175kB/s]Downloading:  81%|████████  | 172k/213k [00:00<00:00, 310kB/s] Downloading: 100%|██████████| 213k/213k [00:00<00:00, 333kB/s]
+2021-09-04T16:00:52.420546000Z Downloading:   0%|          | 0.00/29.0 [00:00<?, ?B/s]Downloading: 100%|██████████| 29.0/29.0 [00:00<00:00, 26.5kB/s]
+2021-09-04T16:00:54.873234600Z Downloading:   0%|          | 0.00/436k [00:00<?, ?B/s]Downloading:   8%|▊         | 32.8k/436k [00:00<00:01, 209kB/s]Downloading:  23%|██▎       | 98.3k/436k [00:00<00:01, 311kB/s]Downloading:  49%|████▉     | 213k/436k [00:00<00:00, 496kB/s] Downloading:  83%|████████▎ | 360k/436k [00:00<00:00, 642kB/s]Downloading:  98%|█████████▊| 425k/436k [00:00<00:00, 542kB/s]Downloading: 100%|██████████| 436k/436k [00:00<00:00, 521kB/s]
+2021-09-04T16:00:54.876970200Z Traceback (most recent call last):
+2021-09-04T16:00:54.876978000Z   File "hw2/app.py", line 7, in <module>
+2021-09-04T16:00:54.876980800Z     model_b = build_model_b('cpu')
+2021-09-04T16:00:54.876982700Z   File "/home/app/hw2/stud/implementation.py", line 583, in build_model_b
+2021-09-04T16:00:54.876984900Z     return StudentModel('cuda',mode='b')
+2021-09-04T16:00:54.876986800Z   File "/home/app/hw2/stud/implementation.py", line 717, in __init__
+2021-09-04T16:00:54.876988700Z     self.model_BertASC.to(device)
+2021-09-04T16:00:54.876990500Z   File "/usr/local/lib/python3.7/site-packages/pytorch_lightning/core/decorators.py", line 89, in inner_fn
+2021-09-04T16:00:54.876992500Z     module = fn(self, *args, **kwargs)
+2021-09-04T16:00:54.876994300Z   File "/usr/local/lib/python3.7/site-packages/pytorch_lightning/utilities/device_dtype_mixin.py", line 120, in to
+2021-09-04T16:00:54.876996300Z     return super().to(*args, **kwargs)
+2021-09-04T16:00:54.876998100Z   File "/usr/local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 612, in to
+2021-09-04T16:00:54.876999900Z     return self._apply(convert)
+2021-09-04T16:00:54.877001700Z   File "/usr/local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 359, in _apply
+2021-09-04T16:00:54.877003600Z     module._apply(fn)
+2021-09-04T16:00:54.877005400Z   File "/usr/local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 359, in _apply
+2021-09-04T16:00:54.877007300Z     module._apply(fn)
+2021-09-04T16:00:54.877009100Z   File "/usr/local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 359, in _apply
+2021-09-04T16:00:54.877010900Z     module._apply(fn)
+2021-09-04T16:00:54.877012700Z   File "/usr/local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 381, in _apply
+2021-09-04T16:00:54.877014600Z     param_applied = fn(param)
+2021-09-04T16:00:54.877016500Z   File "/usr/local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 610, in convert
+2021-09-04T16:00:54.877064300Z     return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+2021-09-04T16:00:54.877068400Z   File "/usr/local/lib/python3.7/site-packages/torch/cuda/__init__.py", line 172, in _lazy_init
+2021-09-04T16:00:54.877070500Z     torch._C._cuda_init()
+2021-09-04T16:00:54.877072500Z RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
